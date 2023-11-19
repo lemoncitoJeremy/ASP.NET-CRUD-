@@ -1,0 +1,52 @@
+﻿@model List<myWebApp.Models.Domain.Tag>
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Show All Tags - Admin Functionality</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+    <!--check kung hindi null at kung may kahit anong objects-->
+    @if(Model != null && Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Display Name</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <!--we will loop through the list and display results-->
+            <!--foreach then double tab then change into Model and tag-->
+            <tbody>
+                @foreach (var tag in Model)
+                {
+                    <tr>
+                        <!--Display the data -->
+                        <td>@tag.Id</td>
+                        <td>@tag.Name</td>
+                        <td>@tag.DisplayName</td>
+                        <td>
+                            <!--the asp route id is used to sent the identifier information to that view-->
+                            <a asp-area="" asp-controller="AdminTags"
+                            asp-action="Edit" asp-route-id="@tag.Id">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }else
+    {
+       <p>No Tags Found!</p>
+    
+    }
+
+</div>
+
+
+

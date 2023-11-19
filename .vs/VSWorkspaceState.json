@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebApp",
+    "\\WebApp\\myWebApp",
+    "\\WebApp\\myWebApp\\Views",
+    "\\WebApp\\myWebApp\\Views\\Shared"
+  ],
+  "SelectedNode": "\\WebApp\\myWebApp\\Views\\Shared\\_Layout.cshtml",
+  "PreviewInSolutionExplorer": false
+}
